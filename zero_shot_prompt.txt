@@ -1,0 +1,12 @@
+function toSnakeCase(text) {
+    return text
+        .replace(/[\W_]+/g, '_')
+        .replace(/([a-z])([A-Z])/g, '$1_$2')
+        .toLowerCase()
+        .replace(/^_+|_+$/g, '');
+}
+
+// Examples:
+// toSnakeCase('hello world') → 'hello_world'
+// toSnakeCase('HelloWorld') → 'hello_world'
+// toSnakeCase('hello-world') → 'hello_world'
